@@ -31,7 +31,7 @@
       enable = true;
       allowedTCPPorts = [
         22 # SSH
-        8096 # Jellyfin (não tem openFirewall fiável)
+        8096 # Jellyfin
       ];
       allowedUDPPorts = [
         1900 # Jellyfin DLNA
