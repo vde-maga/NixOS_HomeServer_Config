@@ -11,6 +11,7 @@
     ./modules/services/jellyfin.nix
     ./modules/services/ssh.nix
     ./modules/services/navidrome.nix
+    ./modules/services/homepage.nix
   ];
 
   # Bootloader.
@@ -31,7 +32,7 @@
       enable = true;
       allowedTCPPorts = [
         22 # SSH
-        8096 # Jellyfin
+        8096 # Jellyfin (não tem openFirewall fiável)
       ];
       allowedUDPPorts = [
         1900 # Jellyfin DLNA
