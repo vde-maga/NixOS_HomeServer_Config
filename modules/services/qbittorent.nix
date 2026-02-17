@@ -10,16 +10,16 @@
       LegalNotice.Accepted = true;
       Preferences = {
         General.Locale = "pt";
-        Downloads = {
-          SavePath = "${vars.storagePath}/downloads/torrents";
-          TempPath = "${vars.storagePath}/downloads/torrents/incomplete";
-          TempPathEnabled = true;
-        };
+        #Downloads = {
+        #  SavePath = "${vars.storagePath}/downloads/torrents";
+        #  TempPath = "${vars.storagePath}/downloads/torrents/incomplete";
+        #  TempPathEnabled = true;
+        #};
       };
-      BitTorrent.Session = {
-        DefaultSavePath = "${vars.storagePath}/downloads/torrents";
-        Port = 6881;
-      };
+      #BitTorrent.Session = {
+      #  DefaultSavePath = "${vars.storagePath}/downloads/torrents";
+      #  Port = 6881;
+      #};
     };
   };
 }

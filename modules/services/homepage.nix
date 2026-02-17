@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
+let
+  vars = import ../../variables.nix;
+in
 {
   services.homepage-dashboard = {
     enable = true;
     openFirewall = true;
 
-    # TODO: Permitir Apenas os Meus Hosts
+    # TODO: Apenas Permitir Local Hosts e Não Tudo
     allowedHosts = "*";
 
     settings = {
@@ -49,23 +52,23 @@
     services = [
       # ---- Secção Media ----
       {
-        "Media" = [
+        "High Art, Lost Media" = [
           {
             "Jellyfin" = {
-              href = "http://192.168.1.95:8096";
+              href = "http://${vars.local_ip}:8096";
               icon = "jellyfin";
-              description = "Servidor de streaming";
+              description = "Mostrar às Gasosas o Netfix de Chad!";
               widget = {
                 type = "jellyfin";
-                url = "http://192.168.1.95:8096";
+                url = "http://${vars.local_ip}:8096";
               };
             };
           }
           {
             "Navidrome" = {
-              href = "http://192.168.1.95:4533";
+              href = "http://${vars.local_ip}:4533";
               icon = "navidrome";
-              description = "Servidor de música";
+              description = "Eu no Metro do Porto a Ouvir Slowdive";
             };
           }
         ];
@@ -73,76 +76,25 @@
 
       # ---- Secção Downloads ----
       {
-        "Downloads" = [
+        "Steam Verde" = [
           {
             "qBittorrent" = {
-              href = "http://192.168.1.10:8080";
+              href = "http://${vars.local_ip}:8080";
               icon = "qbittorrent";
+              description = "Pirataria da Brava";
               widget = {
                 type = "qbittorrent";
-                url = "http://192.168.1.10:8080";
-                username = "admin";
-                password = "adminadmin";
+                url = "http://${vars.local_ip}:8080";
+                #username = "admin";
+                #password = "adminadmin";
               };
             };
           }
-        ];
-      }
-
-      # ---- Secção Sistema ----
-      {
-        "Sistema" = [
           {
-            "NixOS" = {
-              icon = "nixos";
-              description = "Gestão do sistema";
-              href = "https://search.nixos.org";
-            };
-          }
-          {
-            "Cockpit" = {
-              href = "http://192.168.1.10:9090";
-              icon = "server";
-              description = "Administração do servidor";
-            };
-          }
-        ];
-      }
-
-      # ---- Secção Utilitários ----
-      {
-        "Utilitários" = [
-          {
-            "Portainer" = {
-              href = "http://192.168.1.10:9443";
-              icon = "portainer";
-              description = "Gestão de containers";
-            };
-          }
-          {
-            "Grafana" = {
-              href = "http://192.168.1.10:3000";
-              icon = "grafana";
-              description = "Dashboards avançados";
-            };
-          }
-        ];
-      }
-    ];
-
-    bookmarks = [
-      {
-        "Favoritos" = [
-          {
-            "GitHub" = {
-              href = "https://github.com";
-              icon = "github";
-            };
-          }
-          {
-            "NixOS Wiki" = {
-              href = "https://wiki.nixos.org";
-              icon = "nixos";
+            "Soulseek" = {
+              href = "http://${vars.local_ip}:5030";
+              icon = "soulseek";
+              description = "Record Store, com descontos bombásticos";
             };
           }
         ];
