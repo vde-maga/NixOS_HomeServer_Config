@@ -1,7 +1,5 @@
-{ config, pkgs, ... }:
-let
-  vars = import ../../variables.nix;
-in
+{ config, pkgs, vars, ... }:
+
 {
   services.homepage-dashboard = {
     enable = true;

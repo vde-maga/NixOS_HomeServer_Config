@@ -1,19 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 
-let
-  unstable =
-    import
-      (builtins.fetchTarball {
-        url = "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz";
-      })
-      {
-        config.allowUnfree = true;
-      };
-in
 {
   services.navidrome = {
     enable = true;
-    package = unstable.navidrome;
+    package = pkgs-unstable.navidrome;
     openFirewall = true;
     settings = {
       EnableInsightsCollector = true;

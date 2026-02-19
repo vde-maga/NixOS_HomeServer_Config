@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
-let
-  vars = import ../variables.nix;
-in
 {
   users.groups = {
     media = { };

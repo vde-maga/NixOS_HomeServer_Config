@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
-let
-  vars = import ../variables.nix;
-in
 {
   services.openssh = {
     enable = true;
@@ -27,4 +24,5 @@ in
       maxtime = "168h";
     };
   };
+  security.rtkit.enable = true;
 }

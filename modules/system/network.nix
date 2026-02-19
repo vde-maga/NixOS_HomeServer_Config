@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
+{ config, pkgs, vars, ... }:
 
-let
-  vars = import ../variables.nix;
-in
 {
 
   networking = {
@@ -12,7 +9,7 @@ in
 
     # interfaces.${vars.interface} = {
     #   ipv4.addresses = [{
-    #     address = vars.ip;
+    #     address = vars.local_ip;
     #     prefixLength = 24;
     #   }];
     # };
