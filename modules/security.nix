@@ -27,15 +27,4 @@ in
       maxtime = "168h";
     };
   };
-  users.users.${vars.username} = {
-    isNormalUser = true;
-    description = "miraiy";
-    extraGroups = [
-      "networkmanager"
-      #"networkmanager"
-      "wheel"
-      "media"
-    ];
-    #openssh.authorizedKeys.keys = vars.sshKeys;
-  };
 }

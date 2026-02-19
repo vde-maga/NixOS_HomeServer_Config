@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./modules/security.nix
     ./modules/network.nix
+    ./modules/user.nix
     ./modules/services/jellyfin.nix
     ./modules/services/navidrome.nix
     ./modules/services/homepage.nix
@@ -88,6 +89,7 @@
     curl
     unzip
     p7zip
+    fastfetch
   ];
 
   system.stateVersion = "25.11"; # Did you read the comment?
