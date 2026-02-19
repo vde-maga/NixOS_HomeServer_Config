@@ -10,6 +10,7 @@
       Port = 4533;
       Address = "0.0.0.0";
       ScanSchedule = "@every 1h";
+      BaseURL = "/music/";
       #MusicFolder = "/media/music";
     };
   };

@@ -17,7 +17,6 @@
       };
     };
 
-    # Bash com aliases úteis para o servidor
     bash = {
       enable = true;
       shellAliases = {

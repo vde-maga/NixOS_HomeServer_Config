@@ -9,12 +9,14 @@
     ../../modules/system/network.nix
     ../../modules/system/security.nix
     ../../modules/system/users.nix
+    ../../modules/system/storage.nix
     
     # Serviços
     ../../modules/services/jellyfin.nix
     ../../modules/services/navidrome.nix
     ../../modules/services/homepage.nix
     ../../modules/services/qbittorent.nix
+    ../../modules/services/nginx.nix
     #../../modules/services/soulseek.nix
   ];
 
